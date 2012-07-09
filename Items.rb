@@ -395,6 +395,7 @@ DataMapper.auto_upgrade!
 
 # Container for UI instances
 class CLI
+    # reference to the Item database
     Items = Pathfinder::Item
     include Pathfinder::UI
 
@@ -408,12 +409,17 @@ class CLI
         # otherwise, hand back a spaced string
         args.join(' ')
     end
-end
 
+    def initialize
 ########
 # The UI for this tool is Pry, a ruby console
 # To find the commands and objects you can manipulate, type "ls"
 # Common commands: inventory, buy, sell, drop
 # For more advanced inventory derping, manipulate the Items object directly
 # see http://datamapper.org/docs/ for help with DataMapper
-CLI.new.instance_eval { binding.pry }
+        binding.pry
+    end
+end
+
+# create the CLI
+CLI.new
