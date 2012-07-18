@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# Command line interface to pathfinder-tools
+require File.dirname(__FILE__) + '/../lib/pathfinder'
+require File.dirname(__FILE__) + '/../config/db'
+require 'pathfinder/ui'
+
+# Finalize our models...
+DataMapper.finalize
+# And run any database upgrades needed
+DataMapper.auto_upgrade!
+
+# Add dice-rolling to Integer
+class Integer
+  include Pathfinder::UI::DiceRolling
+end
+
+# ENGAGE
+Pathfinder::UI::CLI.new

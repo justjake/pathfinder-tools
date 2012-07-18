@@ -1,0 +1,5 @@
+# Ignore databases
+*.sqlite
+# Ingore Jetbrains idea files
+.idea
+*.iml
