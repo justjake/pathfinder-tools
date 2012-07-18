@@ -66,7 +66,7 @@ Finally, gold management.
 
 If you sell an item you bought in-game, *DON'T* use
 {Pathfinder::Item#sell}. You should instead drop the item, and then use
-{Pathfinder::UI#earn} to credit yourself with the proceeds of your sale.
+{Pathfinder::UI::Commands#earn} to credit yourself with the proceeds of your sale.
 This is because "selling" an item destroys its record, or, in the case
 of selling partial stacks, changes the value you initially bought.
 

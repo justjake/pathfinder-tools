@@ -10,8 +10,8 @@ require 'colorize'
 # Tools for playing a Pathfinder D&D game
 module Pathfinder
     # Manages item history storage
-    # @TODO refactor so this isn't bloated
-    # @TODO remove all the modified to_s stuff and put it in a mixin under {Pathfinder::UI}
+    # @todo refactor so this isn't bloated
+    # @todo remove all the modified to_s stuff and put it in a mixin under {Pathfinder::UI}
     class Item
         include DataMapper::Resource
 

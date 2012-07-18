@@ -3,3 +3,5 @@
 # Ingore Jetbrains idea files
 .idea
 *.iml
+# yarddoc?
+.yardoc

@@ -18,7 +18,7 @@ module Pathfinder
         # unpack as numbers
         num, sides = d.split('d').map {|d| Integer(d) };
 
-        # @TODO finish this, gonna make shit work first
+        # @todo finish this, gonna make shit work first
 
       end
   end

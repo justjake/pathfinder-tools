@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Pathfinder::UI::CLI
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Pathfinder.html" title="Pathfinder (module)">Pathfinder</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../UI.html" title="Pathfinder::UI (module)">UI</a></span></span>
+     &raquo; 
+    <span class="title">CLI</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Pathfinder::UI::CLI
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Pathfinder::UI::CLI</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Commands.html" title="Pathfinder::UI::Commands (module)">Commands</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/pathfinder/ui.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Presents a Pry-based CLI interface when an instance is created</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="Items-constant" class="">Items =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>reference to the Item database</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Item</span></pre></dd>
+      
+        <dt id="Rolls-constant" class="">Rolls =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Roll</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CLI) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of CLI.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">- (Object) <strong>method_missing</strong>(*args, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Unknown variables try to resolve to item instances.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Commands.html" title="Pathfinder::UI::Commands (module)">Commands</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Commands.html#add-instance_method" title="Pathfinder::UI::Commands#add (method)">#add</a></span>, <span class='object_link'><a href="Commands.html#all-instance_method" title="Pathfinder::UI::Commands#all (method)">#all</a></span>, <span class='object_link'><a href="Commands.html#buy-instance_method" title="Pathfinder::UI::Commands#buy (method)">#buy</a></span>, <span class='object_link'><a href="Commands.html#drop-instance_method" title="Pathfinder::UI::Commands#drop (method)">#drop</a></span>, <span class='object_link'><a href="Commands.html#earn-instance_method" title="Pathfinder::UI::Commands#earn (method)">#earn</a></span>, <span class='object_link'><a href="Commands.html#find-instance_method" title="Pathfinder::UI::Commands#find (method)">#find</a></span>, <span class='object_link'><a href="Commands.html#gain-instance_method" title="Pathfinder::UI::Commands#gain (method)">#gain</a></span>, <span class='object_link'><a href="Commands.html#gold-instance_method" title="Pathfinder::UI::Commands#gold (method)">#gold</a></span>, <span class='object_link'><a href="Commands.html#inventory-instance_method" title="Pathfinder::UI::Commands#inventory (method)">#inventory</a></span>, <span class='object_link'><a href="Commands.html#one-instance_method" title="Pathfinder::UI::Commands#one (method)">#one</a></span>, <span class='object_link'><a href="Commands.html#purchased-instance_method" title="Pathfinder::UI::Commands#purchased (method)">#purchased</a></span>, <span class='object_link'><a href="Commands.html#sell-instance_method" title="Pathfinder::UI::Commands#sell (method)">#sell</a></span>, <span class='object_link'><a href="Commands.html#show-instance_method" title="Pathfinder::UI::Commands#show (method)">#show</a></span>, <span class='object_link'><a href="Commands.html#spend-instance_method" title="Pathfinder::UI::Commands#spend (method)">#spend</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Pathfinder::UI::CLI (class)">CLI</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of CLI</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+<span class='comment'>########
+</span><span class='comment'># The UI for this tool is Pry, a ruby console
+</span><span class='comment'># To find the commands and objects you can manipulate, type &quot;ls&quot;
+</span><span class='comment'># Common commands: inventory, buy, sell, drop
+</span><span class='comment'># For more advanced inventory derping, manipulate the Items object directly
+</span><span class='comment'># see http://datamapper.org/docs/ for help with DataMapper
+</span>  <span class='id identifier rubyid_binding'>binding</span><span class='period'>.</span><span class='id identifier rubyid_pry'>pry</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(*args, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Unknown variables try to resolve to item instances. If that fails, they
+become strings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='comment'># try to hand back an item
+</span>  <span class='id identifier rubyid_try_find'>try_find</span> <span class='op'>=</span> <span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Item</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='period'>.</span><span class='id identifier rubyid_like'>like</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_try_find'>try_find</span> <span class='kw'>if</span> <span class='id identifier rubyid_try_find'>try_find</span>
+
+  <span class='comment'># otherwise, hand back a spaced string
+</span>  <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Jul 18 15:47:21 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
