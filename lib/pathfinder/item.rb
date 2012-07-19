@@ -212,7 +212,7 @@ module Pathfinder
         # Add more items to a stack you currently have
         # @param [Integer] quant quantity of items to add to the stack
         def add(quant)
-            quantity_consumed -= quant
+            self.quantity_consumed -= quant
             save
             "added #{quant} #{name}"
         end

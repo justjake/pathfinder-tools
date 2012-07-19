@@ -3,6 +3,10 @@
 dir = File.dirname(File.absolute_path(__FILE__))
 require dir + '/../lib/pathfinder'
 require dir + '/../config/db'
+
+require 'rubygems'
+require 'pry'
+require 'pathfinder/tabletop'
 require 'pathfinder/ui'
 
 # Finalize our models...
@@ -15,5 +19,5 @@ class Integer
   include Pathfinder::UI::DiceRolling
 end
 
-# ENGAGE
+# Picard: ENGAGE
 Pathfinder::UI::CLI.new

@@ -1,4 +1,6 @@
 require 'pry'
+require 'pathfinder/tabletop'
+
 module Pathfinder
   module UI
     # mixin to add dice-rolling to ruby's basic Integer class (derp)
@@ -162,8 +164,9 @@ module Pathfinder
     # Presents a Pry-based CLI interface when an instance is created
     class CLI
       # reference to the Item database
-      Items = Pathfinder::Item
-      Rolls = Pathfinder::Roll
+      Items =  Pathfinder::Item
+      Rolls =  Pathfinder::Roll
+      Combat = Pathfinder::Tabletop::Combat
 
       # need those sweet, sweet UI commands
       include Pathfinder::UI::Commands
@@ -175,18 +178,27 @@ module Pathfinder
         try_find = Pathfinder::Item.all(:name.like => args[0])[0]
         return try_find if try_find
 
-        # otherwise, hand back a spaced string
-        args.join(' ')
+        # otherwise, it really is missing (derp)
+        raise NoMethodError.new("Could not find that method or an item with that name", args[0].to_s)
       end
 
+      # start the CLI REPL
       def initialize
-########
-# The UI for this tool is Pry, a ruby console
-# To find the commands and objects you can manipulate, type "ls"
-# Common commands: inventory, buy, sell, drop
-# For more advanced inventory derping, manipulate the Items object directly
-# see http://datamapper.org/docs/ for help with DataMapper
-        binding.pry
+        c = Combat.new
+        c.add("mook1", 5)
+        c.add("mook2", 10)
+        c.add("shalizara", 15)
+
+        print "\e[H\e[2J"
+        puts "Pathfinder Toolkit REPL".green
+        puts "======================="
+        puts <<-help
+
+To find the commands and objects you can manipulate, type #{"ls".green}
+For the documentation for a command, object, module, or class, use #{"show-doc".green} #{"OBJECT".red}
+This REPL uses `Pry`. For a full list of built-in commands, please see http://pryrepl.org/
+        help
+        binding.pry(quiet: true)
       end
     end
   end
