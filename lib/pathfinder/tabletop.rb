@@ -43,7 +43,6 @@ module Pathfinder
       # turns until you type finish
       def start
         self.actors.sort_by! {|actor| actor.initiative}.reverse!
-        self.fighting = true
         i = 0
         puts "Combat has begun!"
         puts 'To advance turn, type "next_turn" or "exit". To end combat, type "finish".'
