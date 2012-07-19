@@ -1,5 +1,13 @@
 # Pathfinder Tools
 
+Use the supreme power of Ruby to help improve your D&D experience
+
+## Requirements
+
+*   Usually you should have [RVM](https://rvm.io//) if you're using Ruby
+*   Then `rvm use default; gem install bundle`
+*   Then `bundle install` to get all the dependencies
+
 ## Item Management
 
 An item storage database. I like to track my total career gold income
@@ -7,11 +15,6 @@ and spending over the life of a character. Items.rb makes this easy.
 It's a SQLite-backed store of all the items I've ever purchased or
 otherwise obtained.
 
-### Requirements
-
-*   Usually you should have [RVM](https://rvm.io//) if you're using Ruby
-*   Then `rvm use default; gem install bundle`
-*   Then `bundle install` to get all the dependencies
 
 ### Usage
 
