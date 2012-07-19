@@ -5,11 +5,16 @@ module Pathfinder
     class Combat
       # A combat-time actor
       class Actor < Struct.new(:name, :initiative)
+        # returns a nice string telling you the actor name and initiative
         def to_s
           "Actor #{self.name} (#{self.initiative})"
         end
       end
+
+      # all the actors in this fight
+      # Array<Actor>
       attr_accessor :actors
+
       # Create a new combat event. You can pass a block to add actors iteratively on the command line
       # and then start the combat immediatly
       # @param [Array<Actor>] actors all the people in this combat.

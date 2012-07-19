@@ -1308,7 +1308,7 @@ credit you with that item's inital price (if it was originally purchased)</p>
       <pre class="code"><span class="info file"># File 'lib/pathfinder/item.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_quant'>quant</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_quantity_consumed'>quantity_consumed</span> <span class='op'>-=</span> <span class='id identifier rubyid_quant'>quant</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_quantity_consumed'>quantity_consumed</span> <span class='op'>-=</span> <span class='id identifier rubyid_quant'>quant</span>
     <span class='id identifier rubyid_save'>save</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>added </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_quant'>quant</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
@@ -1701,7 +1701,7 @@ from your purchases list</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Jul 18 15:47:21 2012 by
+  Generated on Wed Jul 18 22:09:14 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>

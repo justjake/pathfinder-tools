@@ -165,7 +165,9 @@ module Pathfinder
     class CLI
       # reference to the Item database
       Items =  Pathfinder::Item
+      # reference to Dice rolling storage
       Rolls =  Pathfinder::Roll
+      # reference to tabletop combat tool
       Combat = Pathfinder::Tabletop::Combat
 
       # need those sweet, sweet UI commands

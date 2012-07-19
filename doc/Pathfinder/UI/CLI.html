@@ -136,9 +136,36 @@
         <dd><pre class="code"><span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Item</span></pre></dd>
       
         <dt id="Rolls-constant" class="">Rolls =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>reference to Dice rolling storage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Roll</span></pre></dd>
+      
+        <dt id="Combat-constant" class="">Combat =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>reference to tabletop combat tool</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Tabletop</span><span class='op'>::</span><span class='const'>Combat</span></pre></dd>
       
     </dl>
   
@@ -177,7 +204,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A new instance of CLI.</p>
+<p>start the CLI REPL.</p>
 </div></span>
   
 </li>
@@ -236,7 +263,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>A new instance of CLI</p>
+<p>start the CLI REPL</p>
 
 
   </div>
@@ -250,27 +277,43 @@
       <pre class="lines">
 
 
-182
-183
-184
-185
-186
-187
 188
 189
-190</pre>
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 188</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-<span class='comment'>########
-</span><span class='comment'># The UI for this tool is Pry, a ruby console
-</span><span class='comment'># To find the commands and objects you can manipulate, type &quot;ls&quot;
-</span><span class='comment'># Common commands: inventory, buy, sell, drop
-</span><span class='comment'># For more advanced inventory derping, manipulate the Items object directly
-</span><span class='comment'># see http://datamapper.org/docs/ for help with DataMapper
-</span>  <span class='id identifier rubyid_binding'>binding</span><span class='period'>.</span><span class='id identifier rubyid_pry'>pry</span>
+  <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Combat</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mook1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>5</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mook2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shalizara</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>15</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\e[H\e[2J</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pathfinder Toolkit REPL</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_green'>green</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=======================</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;-help</span>
+<span class='tstring_content'>
+</span><span class='embexpr_beg'>To find the commands and objects you can manipulate, type #{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ls</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_green'>green</span><span class='rbrace'>}</span><span class='tstring_content'>
+</span><span class='embexpr_beg'>For the documentation for a command, object, module, or class, use #{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>show-doc</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_green'>green</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OBJECT</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_red'>red</span><span class='rbrace'>}</span><span class='tstring_content'>
+This REPL uses `Pry`. For a full list of built-in commands, please see http://pryrepl.org/
+</span><span class='heredoc_end'>  help
+</span>  <span class='id identifier rubyid_binding'>binding</span><span class='period'>.</span><span class='id identifier rubyid_pry'>pry</span><span class='lparen'>(</span><span class='label'>quiet:</span> <span class='kw'>true</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -305,6 +348,19 @@ become strings</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -312,25 +368,25 @@ become strings</p>
       <pre class="lines">
 
 
-173
-174
-175
-176
-177
 178
 179
-180</pre>
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/ui.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='comment'># try to hand back an item
 </span>  <span class='id identifier rubyid_try_find'>try_find</span> <span class='op'>=</span> <span class='const'>Pathfinder</span><span class='op'>::</span><span class='const'>Item</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='period'>.</span><span class='id identifier rubyid_like'>like</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_try_find'>try_find</span> <span class='kw'>if</span> <span class='id identifier rubyid_try_find'>try_find</span>
 
-  <span class='comment'># otherwise, hand back a spaced string
-</span>  <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='comment'># otherwise, it really is missing (derp)
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not find that method or an item with that name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -343,7 +399,7 @@ become strings</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Jul 18 15:47:21 2012 by
+  Generated on Wed Jul 18 22:09:13 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>

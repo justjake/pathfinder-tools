@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Pathfinder::Tabletop::Combat
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Pathfinder.html" title="Pathfinder (module)">Pathfinder</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Tabletop.html" title="Pathfinder::Tabletop (module)">Tabletop</a></span></span>
+     &raquo; 
+    <span class="title">Combat</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Pathfinder::Tabletop::Combat
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Pathfinder::Tabletop::Combat</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/pathfinder/tabletop.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Combat. tracks initiative and who's currently derping</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Combat/Actor.html" title="Pathfinder::Tabletop::Combat::Actor (class)">Actor</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#actors-instance_method" title="#actors (instance method)">- (Object) <strong>actors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>all the actors in this fight Array&lt;Actor&gt;.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">- (Object) <strong>add</strong>(name, init) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>add an actor to this combat.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finish-instance_method" title="#finish (instance method)">- (Object) <strong>finish</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>end combat.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Combat) <strong>initialize</strong>(actors = [], &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new combat event.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#next_turn-instance_method" title="#next_turn (instance method)">- (Object) <strong>next_turn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>jump to the next turn.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">- (Object) <strong>start</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>start combat.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Pathfinder::Tabletop::Combat (class)">Combat</a></span></tt>) <strong>initialize</strong>(actors = [], &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new combat event. You can pass a block to add actors iteratively
+on the command line and then start the combat immediatly</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>actors</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Combat/Actor.html" title="Pathfinder::Tabletop::Combat::Actor (class)">Actor</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>all the people in this combat.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_actors'>actors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actors'>actors</span> <span class='op'>=</span>   <span class='id identifier rubyid_actors'>actors</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='comment'># if the block expects a paramater yield it this combat object
+</span>    <span class='comment'># Otherwise it should be instance_eval'd
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='kw'>yield</span> <span class='kw'>self</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_instance_eval'>instance_eval</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_start'>start</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="actors=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="actors-instance_method">
+  
+    - (<tt>Object</tt>) <strong>actors</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>all the actors in this fight Array&lt;Actor&gt;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_actors'>actors</span>
+  <span class='ivar'>@actors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add</strong>(name, init) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>add an actor to this combat</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>actor name, eg "Shalizara"</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>init</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>initiative value of the actor, eg 4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_init'>init</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actors'>actors</span> <span class='op'>&lt;&lt;</span> <span class='const'>Actor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_init'>init</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finish-instance_method">
+  
+    - (<tt>Object</tt>) <strong>finish</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>end combat</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
+  <span class='id identifier rubyid_throw'>throw</span> <span class='symbol'>:end_combat</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="next_turn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>next_turn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>jump to the next turn</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_next_turn'>next_turn</span>
+  <span class='id identifier rubyid_throw'>throw</span> <span class='symbol'>:next_actor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>start combat. Sorts all the actors by thier initiative and then loops
+through thier turns until you type finish</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/pathfinder/tabletop.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actors'>actors</span><span class='period'>.</span><span class='id identifier rubyid_sort_by!'>sort_by!</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_actor'>actor</span><span class='op'>|</span> <span class='id identifier rubyid_actor'>actor</span><span class='period'>.</span><span class='id identifier rubyid_initiative'>initiative</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reverse!'>reverse!</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fighting'>fighting</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Combat has begun!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>To advance turn, type &quot;next_turn&quot; or &quot;exit&quot;. To end combat, type &quot;finish&quot;.</span><span class='tstring_end'>'</span></span>
+
+  <span class='comment'># the following uses the ruby catch/throw structure, which is pretty much just GOTO.
+</span>  <span class='comment'># when a symbol is &quot;throw&quot;n, execution continues at the end of the catch block with
+</span>  <span class='comment'># the same symbol
+</span>  <span class='comment'># here, that features is used to escape from a nested 'pry' REPL instance.
+</span>  <span class='id identifier rubyid_catch'>catch</span> <span class='symbol'>:end_combat</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='id identifier rubyid_actors'>actors</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+      <span class='id identifier rubyid_current'>current</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actors'>actors</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbrace'>}</span><span class='tstring_content'> of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_actors'>actors</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='tstring_content'>] It is </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>'s turn</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_catch'>catch</span> <span class='symbol'>:next_actor</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_binding'>binding</span><span class='period'>.</span><span class='id identifier rubyid_pry'>pry</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_i'>i</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>combat is over</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Jul 18 22:09:14 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

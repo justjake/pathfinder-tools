@@ -63,7 +63,7 @@
 
     <div id="content"><div id='filecontents'><h1>Pathfinder Tools</h1>
 
-<h2>Items.rb</h2>
+<h2>Item Management</h2>
 
 <p>An item storage database. I like to track my total career gold income
 and spending over the life of a character. Items.rb makes this easy.
@@ -144,10 +144,57 @@ of selling partial stacks, changes the value you initially bought.</p>
 
 <p>Changing this is a TODO, and may happen when I actually use this in a
 D&amp;D game.</p>
+
+<h2>DM Tools</h2>
+
+<p><code>pathfinder-tools</code> offers a combat order tracker for DMs, contained in
+<span class='object_link'><a href="Pathfinder/Tabletop/Combat.html" title="Pathfinder::Tabletop::Combat (class)">Pathfinder::Tabletop::Combat</a></span>. Use Combat objects to keep a handle on 
+who&#39;s turn it is.</p>
+
+<h3>Usage</h3>
+
+<p>Here&#39;s a basic, iterative usage:</p>
+
+<pre class="code ruby"><code>% fight = Combat.new
+# Add combatants
+% fight.add('mook1', 13)
+% fight.add('mook2', 9)
+% fight.add('mook3', 11)
+% fight.add('justjake', 27)
+% fight.add('nwold', 3)
+# start combat
+% fight.start
+</code></pre>
+
+<p>And here&#39;s one using a more natural syntax</p>
+
+<pre class="code ruby"><code>% fight = Combat.new do
+    add 'mook1', 13
+    add 'mook2', 9
+    add 'mook3', 11
+    add 'justjake', 27
+    add 'nwold', 3
+end
+% combat is started automatically
+</code></pre>
+
+<p>Once in the combat loop, you will no longer be able to access the
+standard Pathfinder tools functions. Instead, you can type <code>exit</code> or
+<code>next_turn</code> to advance the loop, and <code>finish</code> to exit the combat.</p>
+
+<p>You can still roll dice directly from the Integer class by typing
+NUMBER.d NUM2 to roll NUMBER dice with NUM2 sides.</p>
+
+<h3>Planned Features</h3>
+
+<ul>
+<li>  Not leaving behind all the Pathfinder tools functions and
+environment</li>
+</ul>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Jul 18 15:47:20 2012 by
+  Generated on Wed Jul 18 22:09:13 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>

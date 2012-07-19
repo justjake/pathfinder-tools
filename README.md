@@ -1,6 +1,6 @@
 # Pathfinder Tools
 
-## Items.rb
+## Item Management
 
 An item storage database. I like to track my total career gold income
 and spending over the life of a character. Items.rb makes this easy.
@@ -72,3 +72,46 @@ of selling partial stacks, changes the value you initially bought.
 
 Changing this is a TODO, and may happen when I actually use this in a
 D&D game.
+
+## DM Tools
+
+`pathfinder-tools` offers a combat order tracker for DMs, contained in
+{Pathfinder::Tabletop::Combat}. Use Combat objects to keep a handle on 
+who's turn it is.
+
+### Usage
+
+Here's a basic, iterative usage:
+
+    % fight = Combat.new
+    # Add combatants
+    % fight.add('mook1', 13)
+    % fight.add('mook2', 9)
+    % fight.add('mook3', 11)
+    % fight.add('justjake', 27)
+    % fight.add('nwold', 3)
+    # start combat
+    % fight.start
+
+And here's one using a more natural syntax
+
+    % fight = Combat.new do
+        add 'mook1', 13
+        add 'mook2', 9
+        add 'mook3', 11
+        add 'justjake', 27
+        add 'nwold', 3
+    end
+    % combat is started automatically
+
+Once in the combat loop, you will no longer be able to access the
+standard Pathfinder tools functions. Instead, you can type `exit` or
+`next_turn` to advance the loop, and `finish` to exit the combat.
+
+You can still roll dice directly from the Integer class by typing
+NUMBER.d NUM2 to roll NUMBER dice with NUM2 sides.
+
+### Planned Features
+
+*   Not leaving behind all the Pathfinder tools functions and
+    environment
