@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # Command line interface to pathfinder-tools
-require File.dirname(__FILE__) + '/../lib/pathfinder'
-require File.dirname(__FILE__) + '/../config/db'
+dir = File.dirname(File.absolute_path(__FILE__))
+require dir + '/../lib/pathfinder'
+require dir + '/../config/db'
 require 'pathfinder/ui'
 
 # Finalize our models...
